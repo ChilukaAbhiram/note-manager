@@ -1,1 +1,64 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notes Manager</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+
+    <nav>
+        <h1><i class="fa-solid fa-note-sticky"></i> Notes Manager</h1>
+
+        <div class="search-box">
+            <i class="fa-solid fa-search"></i>
+            <input type="text" id="searchInput"
+                placeholder="Search notes...">
+        </div>
+
+        <button id="addBtn">
+            <i class="fa-solid fa-plus"></i> New Note
+        </button>
+    </nav>
+
+    <div class="notes-grid" id="notesGrid"></div>
+
+</div>
+
+<div class="popup" id="popup">
+
+    <div class="popup-content">
+
+        <h2 id="popupTitle">Create Note</h2>
+
+        <input type="text" id="title"
+            placeholder="Enter title">
+
+        <textarea id="content"
+            placeholder="Write your note here..."></textarea>
+
+        <div class="buttons">
+            <button class="save" onclick="saveNote()">
+                Save
+            </button>
+
+            <button class="cancel"
+                onclick="closePopup()">
+                Cancel
+            </button>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
